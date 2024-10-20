@@ -61,12 +61,14 @@ Arm64FeaturesUniquePtr Arm64InstructionSetFeatures::FromVariant(
       "cortex-a57",
       "cortex-a72",
       "cortex-a73",
+      "kryo785",
   };
 
   static const char* arm64_variants_with_crc[] = {
       "default",
       "generic",
       "cortex-a35",
+      "cortex-a510",
       "cortex-a53",
       "cortex-a53.a57",
       "cortex-a53.a72",
@@ -81,29 +83,37 @@ Arm64FeaturesUniquePtr Arm64InstructionSetFeatures::FromVariant(
       "exynos-m3",
       "kryo",
       "kryo385",
+      "kryo585",
       "kryo785",
   };
 
   static const char* arm64_variants_with_lse[] = {
+      "cortex-a510",
       "cortex-a55",
       "cortex-a75",
       "cortex-a76",
       "kryo385",
+      "kryo585",
       "kryo785",
   };
 
   static const char* arm64_variants_with_fp16[] = {
+      "cortex-a510",
       "cortex-a55",
       "cortex-a75",
       "cortex-a76",
       "kryo385",
+      "kryo585",
       "kryo785",
   };
 
   static const char* arm64_variants_with_dotprod[] = {
+      "cortex-a510",
       "cortex-a55",
       "cortex-a75",
       "cortex-a76",
+      "kryo585",
+      "kryo785",
   };
 
   bool needs_a53_835769_fix = FindVariantInArray(arm64_variants_with_a53_835769_bug,
@@ -136,6 +146,7 @@ Arm64FeaturesUniquePtr Arm64InstructionSetFeatures::FromVariant(
     // variants which do *not* need a fix for a53 erratum 835769.
     static const char* other_arm64_known_variants[] = {
         "cortex-a35",
+        "cortex-a510",
         "cortex-a55",
         "cortex-a75",
         "cortex-a76",
@@ -145,6 +156,7 @@ Arm64FeaturesUniquePtr Arm64InstructionSetFeatures::FromVariant(
         "kryo",
         "kryo300",
         "kryo385",
+        "kryo585",
         "kryo785",
         "oryon",
     };
